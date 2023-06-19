@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  build:
+  buildtiti:
     steps:
       - name: Build and Test
         uses: actions/checkout@v3
