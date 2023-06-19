@@ -28,7 +28,6 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v3
   build3:
-    needs: build
     steps:
       - name: Build and Test
         uses: actions/checkout@v3
