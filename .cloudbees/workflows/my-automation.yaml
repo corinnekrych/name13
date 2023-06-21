@@ -1,14 +1,24 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My automation
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build333:
+    steps:
+      - name: Build and Test
+        uses: docker
+        run: ttt
+      - name: Configure AWS credentials
+        uses: docker
+        run: yyy
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: docker
+        run: yy
+  build1:
     steps:
       - name: Build and Test
         uses: actions/checkout@v3
