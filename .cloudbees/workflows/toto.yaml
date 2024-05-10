@@ -5,9 +5,9 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: {
-    ref: main
-  }
+  workflow_dispatch: 
+    - ref: main
+  
 jobs:
   build:
     steps:
